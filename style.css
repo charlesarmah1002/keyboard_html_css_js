@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    cursor: default;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100dvh;
+    background: #121212;
+    color: #faf4f9;
+}
+
+#display {
+    min-width: 300px;
+    height: 85px;
+    margin-block-end: 40px;
+    background: transparent;
+    border: 1px solid;
+    margin-inline: auto;
+    padding-inline: 20px;
+
+    input {
+        background: transparent;
+        color: #faf4f9;
+        text-transform: capitalize;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+}
+
+#keyboard_container {
+    display: grid;
+    text-align: center;
+    gap: 7px;
+
+    > .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+
+        > span {
+            width: 50px;
+            aspect-ratio: 1;
+            border: 1px solid;
+            display: grid;
+            place-content: center;
+            border-radius: 4px;
+            text-transform: capitalize;
+        }
+
+        > span:hover {
+            background: #faf4f9;
+            color: #121212;
+        }
+
+        > .spaceBar {
+            width: 300px;
+            aspect-ratio: 0;
+            height: 40px;
+        }
+
+    }
+    
+    > .actions {
+        justify-content: space-between;
+
+        > .clear,
+        > .backspace {
+            width: 120px;
+            aspect-ratio: 0;
+            height: 45px;
+        }
+    }
+}
