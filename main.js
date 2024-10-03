@@ -1,9 +1,18 @@
+
 let buttons = document.querySelectorAll('.row button'),
     display = document.querySelector('#display'),
     input = document.querySelector('input[type="text"]'),
     allowedKeys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
     sound = document.getElementById('sound');
 
+
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+if (!isMobileDevice()) {
+    document.querySelectorAll('#keyboard_container').hidden = true;
+}
 
 buttons.forEach(button => {
 
