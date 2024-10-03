@@ -15,53 +15,56 @@
 
 <body>
     <div id="display">
-        <input type="text" name="input" id="input" disabled>
     </div>
+    <input type="text" name="input" id="input" hidden disabled>
     <div id="keyboard_container">
         <div class="row actions">
-            <span class="clear">
+            <button class="clear">
                 clear
-            </span>
-            <span class="backspace">
+            </button>
+            <button class="backspace">
                 <i class="ri-delete-back-2-line"></i>
-            </span>
+            </button>
         </div>
         <div class="row">
-            <span>q</span>
-            <span>w</span>
-            <span>e</span>
-            <span>r</span>
-            <span>t</span>
-            <span>y</span>
-            <span>u</span>
-            <span>i</span>
-            <span>o</span>
-            <span>p</span>
+            <button>q</button>
+            <button>w</button>
+            <button>e</button>
+            <button>r</button>
+            <button>t</button>
+            <button>y</button>
+            <button>u</button>
+            <button>i</button>
+            <button>o</button>
+            <button>p</button>
         </div>
         <div class="row">
-            <span>a</span>
-            <span>s</span>
-            <span>d</span>
-            <span>f</span>
-            <span>g</span>
-            <span>h</span>
-            <span>j</span>
-            <span>k</span>
-            <span>l</span>
+            <button>a</button>
+            <button>s</button>
+            <button>d</button>
+            <button>f</button>
+            <button>g</button>
+            <button>h</button>
+            <button>j</button>
+            <button>k</button>
+            <button>l</button>
         </div>
         <div class="row">
-            <span>z</span>
-            <span>x</span>
-            <span>c</span>
-            <span>v</span>
-            <span>b</span>
-            <span>n</span>
-            <span>m</span>
+            <button>z</button>
+            <button>x</button>
+            <button>c</button>
+            <button>v</button>
+            <button>b</button>
+            <button>n</button>
+            <button>m</button>
         </div>
-        <div class="row">
-            <span class="spaceBar">SPACE</span>
+        <div class="row spacebar">
+            <button class="spaceBar">SPACE</button>
         </div>
     </div>
+
+    <!-- sounds for the button press -->
+     <audio src="zapsplat_multimedia_button_click_fast_plastic_49161.mp3" id="sound"></audio>
 
     <!-- javascript -->
      <script src="main.js"></script>

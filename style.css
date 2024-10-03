@@ -15,13 +15,13 @@ body {
 }
 
 #display {
-    min-width: 300px;
-    height: 85px;
+    max-width: 350px;
     margin-block-end: 40px;
     background: transparent;
-    border: 1px solid;
+    /* border: 1px solid; */
     margin-inline: auto;
     padding-inline: 20px;
+    position: relative;
 
     input {
         background: transparent;
@@ -31,50 +31,85 @@ body {
         height: 100%;
         border: none;
         outline: none;
-        text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+}
+
+#display::after {
+    width: 10px;
+    height: 3px;
+    background: white;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    animation: blink 1s infinite forwards;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
     }
 }
 
 #keyboard_container {
     display: grid;
     text-align: center;
-    gap: 7px;
+    gap: 2px;
+    position: absolute;
+    bottom: 30px;
+    margin: auto;
+    left: 0;
+    right: 0;
 
-    > .row {
+    >.row {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 7px;
+        gap: 2px;
 
-        > span {
-            width: 50px;
+        >button {
+            width: 30px;
             aspect-ratio: 1;
             border: 1px solid;
             display: grid;
             place-content: center;
             border-radius: 4px;
             text-transform: capitalize;
+            background: transparent;
+            color: inherit;
         }
 
-        > span:hover {
+        >button:hover {
             background: #faf4f9;
             color: #121212;
         }
 
-        > .spaceBar {
+        >.spaceBar {
             width: 300px;
             aspect-ratio: 0;
             height: 40px;
         }
 
     }
-    
-    > .actions {
-        justify-content: space-between;
 
-        > .clear,
-        > .backspace {
+    >.row:nth-child(5) {
+        margin-block-start: 5px;
+    }
+
+    >.actions {
+        justify-content: center;
+        gap: 90px;
+        padding-inline: 5px;
+        margin-block-end: 7px;
+
+        >.clear,
+        >.backspace {
             width: 120px;
             aspect-ratio: 0;
             height: 45px;
